@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-import { userName } from './server/firebase';
 
 function App() {
+  const [inCall, setInCall] = useState(false)
   return (
     <div className="App">
-      {userName}
+      {
+        inCall? "We're in the call":"waiting to join call"
+      }
     </div>
   );
 }
